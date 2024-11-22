@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(to right, #74ebd5, #acb6e5);
+  transition: background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Color Variables for Dark/Light Mode */
+:root {
+  --bg-color-light: #e0f7fa; /* Light Background */
+  --bg-color-dark: #263238; /* Dark Background */
+  --text-color-light: #000; /* Light Text */
+  --text-color-dark: #fff; /* Dark Text */
+  --button-bg-light: #00796b; /* Button Background (Light Mode) */
+  --button-bg-dark: #004d40; /* Button Background (Dark Mode) */
+  --button-hover-bg-light: #004d40; /* Button Hover Background (Light Mode) */
+  --button-hover-bg-dark: #00332e; /* Button Hover Background (Dark Mode) */
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Switch for Dark/Light Mode */
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-switch {
+  display: none;
+}
+
+.toggle-label {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-label::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle-switch:checked + .toggle-label::before {
+  transform: translateX(25px);
+  background-color: #4caf50;
+}
+
+.toggle-switch:checked + .toggle-label {
+  background-color: #333;
+}
+
+/* Container for Input and Buttons */
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+/* Title Styling */
+.title {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Result Box */
+.result-box {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--text-color-light);
+}
+
+/* Convert Button */
+.convert-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--button-bg-light);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.convert-button:hover {
+  background-color: var(--button-hover-bg-light);
+}
+
+/* BODMAS Button */
+.bodmas-button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bodmas-button:hover {
+  background-color: #27ae60;
+}
+
+/* BODMAS Operations (Hidden by Default) */
+.bodmas-operations button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 1rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bodmas-operations button:hover {
+  background-color: #5a6268;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+body.dark .container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark .result-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-color-dark);
+}
+
+body.dark .convert-button {
+  background-color: var(--button-bg-dark);
+}
+
+body.dark .convert-button:hover {
+  background-color: var(--button-hover-bg-dark);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter to Number Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Toastify/2.1.0/Toastify.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Toggle Button for Dark/Light Mode -->
+        <div class="toggle-container">
+            <input type="checkbox" id="modeToggle" class="toggle-switch">
+            <label for="modeToggle" class="toggle-label"></label>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <h1 class="title">Letter to Number Converter</h1>
+
+            <!-- Input Field for Letters -->
+            <input id="inputField" class="input-field" type="text" placeholder="Enter text (A-Z)">
+
+            <!-- Result Display -->
+            <div id="resultText" class="result-box">Result will show here...</div>
+
+            <!-- Convert Button -->
+            <button id="convertButton" class="convert-button">Convert</button>
+
+            <!-- BODMAS Operations Button -->
+            <button id="bodmasButton" class="bodmas-button">Enable BODMAS</button>
+
+            <!-- BODMAS Operations (hidden by default) -->
+            <div id="bodmasOperations" class="bodmas-operations" style="display: none;">
+                <button onclick="addToExpression('+')">+</button>
+                <button onclick="addToExpression('-')">-</button>
+                <button onclick="addToExpression('*')">*</button>
+                <button onclick="addToExpression('/')">/</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Toastify/2.1.0/Toastify.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
